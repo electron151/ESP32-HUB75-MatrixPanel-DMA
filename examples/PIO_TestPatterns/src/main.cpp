@@ -30,31 +30,33 @@
 
 /*  Default library pin configuration for the reference
   you can redefine only ones you need later on object creation
-#define R1 25
-#define G1 26
-#define BL1 27
-#define R2 14
-#define G2 12
-#define BL2 13
-#define CH_A 23
-#define CH_B 19
-#define CH_C 5
-#define CH_D 17
-#define CH_E -1 // assign to any available pin if using panels with 1/32 scan
-#define CLK 16
-#define LAT 4
-#define OE 15
 */
 
+#define R1 3
+#define G1 14
+#define BL1 46
+#define R2 21
+#define G2 45
+#define BL2 47
+#define CH_A 36
+#define CH_B 35
+#define CH_C 38
+#define CH_D 37
+#define CH_E 48 // assign to any available pin if using panels with 1/32 scan
+#define CLK 40
+#define LAT 39
+#define OE 42
+
+
 // Configure for your panel(s) as appropriate!
-#define PIN_E 32
+#define PIN_E 48
 #define PANEL_WIDTH 64
 #define PANEL_HEIGHT 64         // Panel height of 64 will required PIN_E to be defined.
 
 #ifdef VIRTUAL_PANE
  #define PANELS_NUMBER 4         // Number of chained panels, if just a single panel, obviously set to 1
 #else
- #define PANELS_NUMBER 2         // Number of chained panels, if just a single panel, obviously set to 1
+ #define PANELS_NUMBER 1         // Number of chained panels, if just a single panel, obviously set to 1
 #endif
 
 #define PANE_WIDTH PANEL_WIDTH * PANELS_NUMBER
